@@ -1,0 +1,44 @@
+LVEDV	108±24 mL（成人）；男性 80~170 mL，女性 60~110 mL	
+LVESV	45±16 mL（成人）；男性 35~65 mL，女性 25~55 mL	
+LVEF	50%~70%（正常）；40%~49%（轻度减低）；<40%（心衰）	
+RVEDV	85±20 mL（三维超声）	
+RVESV	30~50 mL（估算，RVEF > 45%）	
+MAP	70~105 mmHg（正常成人）	
+扩张型心肌病DCM时的LVEDV	可达 200~400+ mL，LVEF < 40%	
+高血压时的LVEDV、LVESV 随分期逐级升高，LVEF 降低
+
+推荐工况：
+
+- 正常成年人
+
+X_case1 = np.array([[108.0, 45.0, 0.58, 85.0, 35.0, 93.0]], dtype=np.float32)
+
+注：LVEDV=108, LVESV=45, LVEF=0.58, RVEDV=85, RVESV=35, MAP=93
+
+- 射血分数保留的心力衰竭（HFpEF）
+常见于高血压性心脏病患者：心室壁增厚、舒张功能减退，但收缩功能尚可。
+
+X_case2 = np.array([[95.0, 42.0, 0.56, 88.0, 38.0, 108.0]], dtype=np.float32)
+
+注：LVEDV=95, LVESV=42, LVEF=0.56, RVEDV=88, RVESV=38, MAP=108
+对应血压约 140/90 mmHg；LVEF看似"正常"但心室偏小、充盈受限
+
+- 射血分数降低的心力衰竭（HFrEF，扩张型心肌病样）
+心室显著扩大、收缩功能严重受损。
+
+X_case3 = np.array([[180.0, 120.0, 0.33, 130.0, 75.0, 72.0]], dtype=np.float32)
+
+注：LVEDV=180, LVESV=120, LVEF=0.33, RVEDV=130, RVESV=75, MAP=72
+对应血压约 100/65 mmHg；典型DCM表现
+
+- 主动脉瓣狭窄（ AS）
+
+X_as = np.array([[130.0, 70.0, 0.46, 110.0, 50.0, 125.0]], dtype=np.float32)
+
+注：LVEDV=130, LVESV=70, LVEF=0.46，RVEDV=110, RVESV=50，MAP=125
+
+- 主动脉瓣关闭不全（AR）
+
+X_ar = np.array([[220.0, 110.0, 0.50, 140.0, 30.0, 95.0]], dtype=np.float32)
+
+注：LVEDV=220, LVESV=110, LVEF=0.50, RVEDV=140, RVESV=30, MAP=95
