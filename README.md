@@ -8,7 +8,7 @@
 
 ```
 .
-├── LPM_model.slx               # Simulink 集中参数模型（核心仿真）
+├── LPM_model.slx               # Simulink 集中参数模型（核心仿真）*成果尚未发布暂时无法公开
 ├── LHS.m                        # MATLAB 脚本：拉丁超立方采样 + 批量仿真生成数据集
 ├── synthetic_dataset.mat        # 生成的仿真数据集（969 组有效样本）
 │
@@ -30,10 +30,10 @@
 │   └── test_predictions.npz
 │
 ├── 多层感知机算法架构说明.md      # 算法架构详细文档
-├── environment.yaml               # conda 环境导出文件（一键复现）
+├── environment.yaml               # conda 环境导出文件
 ├── 心室的压力容积环.docx          # param中给出的5组样例工况生成PV环结果与分析
-├── 项目演示案例.mp4               # 运行本项目的演示视频
-└── README.md                    # 本文件
+├── 项目演示案例.mp4               # 运行本项目的演示视频 *成果尚未发布暂时无法公开
+└── README.md
 ```
 
 ---
@@ -98,15 +98,9 @@ conda env create -f environment.yaml
 conda activate sci_computing
 ```
 
-环境包含的核心依赖：
-
-- Python 3.9 + PyTorch 2.3.1（CPU）
-- NumPy, SciPy, scikit-learn, matplotlib, pandas
-
 ### MATLAB（数据生成 & 仿真）
 
-- MATLAB（带 Simulink）
-- 可选：Statistics and Machine Learning Toolbox（用于 `lhsdesign`，无则自动回退为均匀随机采样）
+- MATLAB（带 Simulink），推荐版本：MATLAB R2024-a
 
 ---
 
