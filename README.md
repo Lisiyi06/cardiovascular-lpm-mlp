@@ -234,7 +234,12 @@ MAP    - 平均动脉压 (mmHg)
 
 ---
 
-## 引用
+## 五组工况PV环生成结果对比
+![PV loop comparison](PV_loop_comparison_v2.png)
+
+---
+
+## 注
 
 本项目尚有疏漏，仅用于作者团队深度科研训练srtp项目；欢迎联系作者。
 
