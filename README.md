@@ -104,6 +104,10 @@ conda activate sci_computing
 
 ---
 
+![alt text](代码逻辑图示.png)
+
+---
+
 ## 运行方式
 
 整个流程分为 **4 步**，按顺序执行。第 2 步可跳过（数据集已生成）。
